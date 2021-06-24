@@ -1,12 +1,76 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Virus</title>
+        <body scroll="no" style="overflow: hidden"> <!--zet scrollen uit-->
+        <link rel="stylesheet" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <canvas id="canvas"></canvas>
+        <script src="map1.js"></script>	
+        <script src="ball1.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+         
+	
+        </div>
+
+
+	<style type="text/css">
+		 canvas {
+            outline: 1px solid black;  
+
+        }
+	
+		body {
+			margin: 0;
+		}
+		
+	</style>
+
+
+
+    </body>
+	
+
+
+	<h4> Control: Arrow keys || Don't get hit by the center of the Virus || Don't touch the walls || Don't try to get out of the border || <br>
+	Try to reach the blue finish to go to the next level</h4>	
+	
+
+
+        <div class="welcome-section content-hidden">
+        <div class="content-wrap">
+            <ul class="fly-in-text">
+                <li>V</li>
+                <li>I</li>
+                <li>R</li>
+                <li>U</li>
+                <li>S</li>
+            </ul>
+            <a href="#" class="enter-button">PLAY NOW</a>
+        </div>
+    </div>
+    <script type="text/javascript">
     
-</body>
+    $(function() {
+        var welcomeSection = $('.welcome-section'),
+        enterButton = welcomeSection.find('.enter-button');
+
+        setTimeout(function() {
+            welcomeSection.removeClass('content-hidden');
+        },800);
+
+        enterButton.on('click', function(e) {
+            e.preventDefault();
+            welcomeSection.addClass('content-hidden').fadeOut();
+        });
+
+    });
+    
+    
+    </script>
+    </body>
 </html>
